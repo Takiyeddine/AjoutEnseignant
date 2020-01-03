@@ -25,15 +25,15 @@ class ExampleTest extends TestCase
     {
         $enseignant=new Enseignant();
         $data = [
-            'nom' => 'lamia',
-            'prenom' => 'lamia',
-            'email' => 'lamia',
-            'date_naissance' =>'lamia' ,
-            'specialite' => 'lamia',
-            'licence' => 'lamia',
-            'master' => 'lamia',
-            'doctorat' =>'lamia' ,
-            'experience' => '22'
+            'nom' => 'Bouali',
+            'prenom' => 'Abdelhadi',
+            'email' => 'ha_bouali@esi.dz',
+            'date_naissance' =>'1999/28/11' ,
+            'specialite' => 'Test',
+            'licence' => 'Test2',
+            'master' => 'Test3',
+            'doctorat' =>'Test4' ,
+            'experience' => '4 ans'
             
         ];
         $response = $this->json('POST','/app',$data);
@@ -47,7 +47,7 @@ class ExampleTest extends TestCase
     public function testHasEnseignats()
     {
         $this->assertDatabaseHas('enseignants', [
-            'email' => 'hl_selmane@esi.dz'
+            'email' => 'ha_bouali@esi.dz'
         ]);
     }
 
